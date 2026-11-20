@@ -1,21 +1,23 @@
 {
   "name": "safe-html-pdf",
   "version": "0.1.0",
-  "description": "Render untrusted or AI-written HTML to PDF with Playwright: JavaScript and network off, hard limits, and a layout lint for overflow, text outside the page and broken images.",
+  "description": "Playwright PDF renderer for untrusted or AI-written HTML: JavaScript and network off, hard limits, and a layout lint for overflow and broken images.",
   "keywords": [
-    "pdf",
+    "playwright pdf",
+    "html to pdf node",
+    "puppeteer html to pdf",
+    "generate pdf from html",
     "html-to-pdf",
-    "html2pdf",
+    "untrusted-html",
+    "ai-generated",
     "playwright",
     "chromium",
-    "untrusted-html",
     "headless",
-    "security",
     "layout-lint",
     "slides",
-    "ai-generated"
+    "pdf"
   ],
-  "homepage": "https://github.com/saimulft/safe-html-pdf#readme",
+  "homepage": "https://oss.saimulislam.com/safe-html-pdf/",
   "bugs": {
     "url": "https://github.com/saimulft/safe-html-pdf/issues"
   },

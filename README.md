@@ -1,10 +1,12 @@
 # safe-html-pdf
 
-Render untrusted or AI-written HTML to PDF with Playwright: no JavaScript, no network, hard limits, and a layout lint.
+Playwright PDF rendering for untrusted or AI-written HTML: no JavaScript, no network, hard limits, and a layout lint.
 
 [![npm version](https://img.shields.io/npm/v/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
 [![license](https://img.shields.io/npm/l/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
 [![node version](https://img.shields.io/node/v/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
+
+Guide, examples and FAQ: https://oss.saimulislam.com/safe-html-pdf/
 
 It renders the quotation PDFs in the [Bundlewise CRM](https://crm.bundlewise.app).
 

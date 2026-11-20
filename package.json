@@ -1,0 +1,73 @@
+{
+  "name": "safe-html-pdf",
+  "version": "0.1.0",
+  "description": "Render untrusted or AI-written HTML to PDF with Playwright: JavaScript and network off, hard limits, and a layout lint for overflow, text outside the page and broken images.",
+  "keywords": [
+    "pdf",
+    "html-to-pdf",
+    "html2pdf",
+    "playwright",
+    "chromium",
+    "untrusted-html",
+    "headless",
+    "security",
+    "layout-lint",
+    "slides",
+    "ai-generated"
+  ],
+  "homepage": "https://github.com/saimulft/safe-html-pdf#readme",
+  "bugs": {
+    "url": "https://github.com/saimulft/safe-html-pdf/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saimulft/safe-html-pdf.git"
+  },
+  "license": "MIT",
+  "author": "Saimul Islam (https://github.com/saimulft)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "safe-html-pdf": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "lint": "eslint . && npm run lint:names",
+    "lint:names": "ls-lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "peerDependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@ls-lint/ls-lint": "^2.3.2",
+    "@types/node": "^20.19.43",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "playwright": "~1.63.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.73.0"
+  }
+}

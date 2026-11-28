@@ -1,18 +1,47 @@
-# safe-html-pdf
+<h1 align="center">safe-html-pdf</h1>
 
-Playwright PDF rendering for untrusted or AI-written HTML: no JavaScript, no network, hard limits, and a layout lint.
+<p align="center">
+  Playwright PDF rendering for untrusted or AI-written HTML: no JavaScript, no network, hard limits, and a layout lint.
+</p>
 
-[![npm version](https://img.shields.io/npm/v/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
-[![license](https://img.shields.io/npm/l/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
-[![node version](https://img.shields.io/node/v/safe-html-pdf)](https://www.npmjs.com/package/safe-html-pdf)
+<p align="center">
+  <a href="https://www.npmjs.com/package/safe-html-pdf"><img alt="npm version" src="https://img.shields.io/npm/v/safe-html-pdf" /></a>
+  <a href="https://www.npmjs.com/package/safe-html-pdf"><img alt="license" src="https://img.shields.io/npm/l/safe-html-pdf" /></a>
+  <a href="https://www.npmjs.com/package/safe-html-pdf"><img alt="node version" src="https://img.shields.io/node/v/safe-html-pdf" /></a>
+</p>
 
-Guide, examples and FAQ: https://oss.saimulislam.com/safe-html-pdf/
+<p align="center">
+  <a href="https://oss.saimulislam.com/safe-html-pdf/">Guide, examples and FAQ</a> ·
+  <a href="https://www.npmjs.com/package/safe-html-pdf">npm</a> ·
+  <a href="https://github.com/saimulft/safe-html-pdf">GitHub</a> ·
+  <a href="https://github.com/saimulft/safe-html-pdf/blob/main/CHANGELOG.md">Changelog</a>
+</p>
+
+<p align="center">
+  <a href="https://oss.saimulislam.com/safe-html-pdf/">
+  <img alt="safe-html-pdf turning a model-written proposal.html into a three-page PDF with JavaScript and network off: page 1 has no warnings, page 2 overflows at div.card, page 3 has two broken images, plus a missing asset and a blocked request for the whole document" src="https://oss.saimulislam.com/shots/safe-html-pdf/pipeline.webp" width="880" />
+  </a>
+</p>
+
+<p align="center">
+  <b>Untrusted HTML in, a checked PDF out.</b> The HTML is rendered with JavaScript and the network off, then every page is checked for overflow, text outside the page and broken images.
+</p>
 
 It renders the quotation PDFs in the [Bundlewise CRM](https://crm.bundlewise.app).
 
 safe-html-pdf prints HTML to a PDF in headless Chromium with JavaScript turned off and every network request refused. The page can only load files you hand it through a `resolveAsset` callback. While the page is open it also checks the layout, per page or per slide, and tells you about overflow, text drawn outside the page and images that failed to load, so a bad document is caught before anyone opens it.
 
 `html-pdf-node` and `puppeteer-html-pdf` also print HTML to PDF, but they leave JavaScript and the network on and say nothing about the layout. That is fine for HTML you wrote yourself. It is the wrong default for HTML written by a model or a user.
+
+## See it work
+
+### The same run in a terminal
+
+The PDF is written even when there are warnings; --strict turns them into a failed run.
+
+<img alt="safe-html-pdf in a terminal: wrote proposal.pdf, 3 pages, 15.1 KB, then 5 warnings with their page and code" src="https://oss.saimulislam.com/shots/safe-html-pdf/render.webp" width="880" />
+
+More examples and the FAQ are on the [guide](https://oss.saimulislam.com/safe-html-pdf/).
 
 ## Install
 

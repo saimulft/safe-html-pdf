@@ -1,6 +1,6 @@
 {
   "name": "safe-html-pdf",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Playwright PDF renderer for untrusted or AI-written HTML: JavaScript and network off, hard limits, and a layout lint for overflow and broken images.",
   "keywords": [
     "playwright pdf",
